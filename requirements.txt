@@ -1,0 +1,8 @@
+picamera2>=0.3.0
+opencv-python-headless>=4.9.0
+numpy>=1.24
+pyserial>=3.5
+ags-geolocation>=0.1.0
+requests>=2.31
+scipy>=1.11
+tflite-runtime>=2.10 

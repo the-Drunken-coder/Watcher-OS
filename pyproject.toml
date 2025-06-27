@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "watcher-os"
+version = "0.1.0"
+description = "Raspberry Pi object detection and geolocation system"
+readme = "README.md"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: System :: Hardware",
+]
+dependencies = [
+    "picamera2>=0.3.0",
+    "opencv-python-headless>=4.9.0",
+    "numpy>=1.24",
+    "pyserial>=3.5",
+    "ags-geolocation>=0.1.0",
+    "requests>=2.31",
+    "scipy>=1.11",
+    "tflite-runtime>=2.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/Watcher-OS"
+Repository = "https://github.com/your-username/Watcher-OS.git"
+Issues = "https://github.com/your-username/Watcher-OS/issues"
+
+[project.scripts]
+watcher = "watcher.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["watcher*"] 
