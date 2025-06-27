@@ -80,8 +80,6 @@ main() {
     mkdir -p /opt/watcher-os/models
     curl -sL -o /tmp/model.zip "https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip"
     unzip -j /tmp/model.zip detect.tflite -d /opt/watcher-os/models/
-    # Rename for clarity
-    mv /opt/watcher-os/models/detect.tflite /opt/watcher-os/models/coco_ssd_mobilenet.tflite
     rm -f /tmp/model.zip
     log_good "AI model downloaded."
 
