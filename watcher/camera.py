@@ -27,18 +27,4 @@ class Camera:
             yield frame
 
     def close(self):
-        self._picam.close()
-
-
-# Convenience context-manager -------------------------------------------------
-
-from contextlib import contextmanager
-
-
-@contextmanager
-def open_camera(*args, **kwargs):
-    cam = Camera(*args, **kwargs)
-    try:
-        yield cam
-    finally:
-        cam.close() 
+        self._picam.close() 

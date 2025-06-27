@@ -26,9 +26,7 @@ class Detection:
 class Detector:
     """Lightweight TFLite detector focused on person class."""
 
-    DEFAULT_MODEL = (
-        Path(__file__).parent / "models" / "ssd_mobilenet_v2_fpnlite_320x320.tflite"
-    )
+    DEFAULT_MODEL_PATH = Path("/opt/watcher-os/models/detect.tflite")
 
     # COCO 2017 class IDs for the objects we care about
     COCO_LABELS: dict[int, str] = {
@@ -44,10 +42,11 @@ class Detector:
         score_threshold: float = 0.5,
         class_whitelist: set[int] | None = None,
     ):
-        model_path = Path(model_path) if model_path else self.DEFAULT_MODEL
+        model_path = Path(model_path) if model_path else self.DEFAULT_MODEL_PATH
         if not model_path.exists():
             raise FileNotFoundError(
-                f"TFLite model not found at {model_path}. Copy or download it before running."
+                f"TFLite model not found at {model_path}. "
+                f"Please ensure it's downloaded via the installer."
             )
         self._interpreter = Interpreter(model_path=str(model_path))
         self._interpreter.allocate_tensors()
