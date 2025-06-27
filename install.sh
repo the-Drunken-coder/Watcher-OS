@@ -55,7 +55,7 @@ main() {
     # --- System Update and Dependency Installation ---
     log "Updating system packages and installing dependencies..."
     apt-get update -y
-    apt-get install -y git python3-pip python3-venv curl libatlas-base-dev unzip
+    apt-get install -y git python3-pip python3-venv curl libatlas-base-dev unzip libcap-dev
     log_good "System dependencies installed."
 
     # --- Clone Repository ---
