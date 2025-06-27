@@ -31,7 +31,7 @@ python flash_minimal.py --device /dev/sdX
 ### Manual install
 
 ```bash
-git clone https://github.com/your-username/Watcher-OS.git
+git clone https://github.com/the-Drunken-coder/Watcher-OS.git
 cd Watcher-OS
 sudo bash install_watcher.sh
 ```
