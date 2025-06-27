@@ -165,7 +165,7 @@ def main():
         
         print("Flashing image to SD card...")
         print("NOTE: You may need to run this as Administrator on Windows")
-        run([rpi_imager, "--cli", "--disable-verify", str(image_path), args.device])
+        run([rpi_imager, "--cli", "--disable-verify", "--enable-writing-system-drives", str(image_path), args.device])
 
     # Step 2: wait for boot partition mount
     boot_path = wait_for_boot_drive()

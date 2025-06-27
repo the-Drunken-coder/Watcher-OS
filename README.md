@@ -11,22 +11,16 @@ A Raspberry Pi-based object detection and geolocation system for autonomous surv
 
 ## 🚀 Quick Start
 
-### Auto-install on fresh Pi OS Lite
+### Easy 2-step install
 
-1. Flash **Raspberry Pi OS Lite (64-bit)** to SD card
-2. Run our installer script:
-
-```bash
-# On Windows (as Administrator)
-python flash_minimal.py --device "\\?\PhysicalDrive1"
-
-# On Linux/macOS  
-python flash_minimal.py --device /dev/sdX
-```
-
-3. Insert SD card in Pi 5 and power on
-4. Wait 5-10 minutes for auto-installation from GitHub
-5. Done! Watcher service starts automatically
+1. **Flash Raspberry Pi OS Lite (64-bit)** to SD card using [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+2. **Add Watcher installer:**
+   ```bash
+   python install_to_sd.py
+   ```
+3. **Insert SD card in Pi 5 and power on**
+4. **Wait 5-10 minutes** - Watcher auto-installs from GitHub and reboots
+5. **Done!** Watcher service starts automatically
 
 ### Manual install
 
